@@ -3,6 +3,18 @@
   events:
   - type: WEBHOOK
     totp: true
+  - type: PULL_REQUEST
+    events:
+    - reopened
+    - opened
+    - assigned
+    - synchronize
+    branches:
+    - '*'
+    - Anni/wcicd
+    - Add-api-references
+    - :default
+    - China-Express
   artifacts:
   - '*'
   actions:
