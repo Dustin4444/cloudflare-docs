@@ -2,5 +2,6 @@
   name: CI
   events:
   - type: WEBHOOK
+    totp: true
   artifacts:
   - '*'
