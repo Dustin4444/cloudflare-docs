@@ -15,3 +15,14 @@
     shell: BASH
     docker_image_name: library/node
     docker_image_tag: 24
+  - action: npx playwright test
+    type: PLAYWRIGHT
+    trigger_time: ON_FAILURE
+    commands: npx playwright test
+    setup_commands: npx playwright install --with-deps
+    shell: BASH
+    docker_image_name: playwright
+    docker_image_tag: v1.58.2-noble
+    image_location: PUBLIC_REGISTRY
+    docker_registry: OTHER
+    registry: mcr.microsoft.com
