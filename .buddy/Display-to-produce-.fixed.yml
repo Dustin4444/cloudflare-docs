@@ -1,0 +1,8 @@
+- pipeline: asw
+  name: Display to produce
+  refs:
+  - :default
+  fail_on_prepare_env_warning: true
+  resources: NANO
+  events:
+  - type: WEBHOOK
