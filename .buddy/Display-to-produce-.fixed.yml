@@ -6,3 +6,15 @@
   resources: NANO
   events:
   - type: WEBHOOK
+  actions:
+  - action: Run cloudflare-docs/$BUDDY_BUILT_DOCKER_IMAGE_DIGEST
+    type: RUN_NEXT_PIPELINE
+    loop:
+    - asw
+    pipeline: $BUDDY_BUILT_DOCKER_IMAGE_DIGEST
+    comment: "Triggered by $BUDDY_PIPELINE_NAME execution #$BUDDY_RUN_ID"
+    project: cloudflare-docs
+    refresh: true
+    environment: $BUDDY_ACTION_ID
+    artifact: $BUDDY
+    priority: NORMAL
