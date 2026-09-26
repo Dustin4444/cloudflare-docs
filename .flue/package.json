@@ -26,7 +26,7 @@
 		"@flue/vite": "2.1.0",
 		"typescript": "7.0.2",
 		"vite": "8.3.0",
-		"vitest": "4.1.10",
+		"vitest": "4.1.11",
 		"vitest-evals": "0.17.0",
 		"wrangler": "4.136.1"
 	}
